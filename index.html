@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Food Safety Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dogs Friendly Food Checker</h1>
+        <label for="category-select">Select Category:</label>
+        <select id="category-select">
+            <option value="">Please Select</option>
+            <option value="human-food">Human Food</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="fruit">Fruit</option>
+        </select>
+        <label for="food-input">Enter or Select Food:</label>
+        <input type="text" id="food-input" placeholder="Start typing or select..." autocomplete="off">
+        <!-- <div id="suggestions" class="suggestions-dropdown"></div> -->
+        <div id="suggestions" class="suggestions-dropdown"></div>
+        <button id="submit-btn">Submit</button>
+        <div id="info"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

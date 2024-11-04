@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+/* .container {
+    max-width: 500px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    position: relative; /* Necessary for absolute positioning of dropdown */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+}
+
+input[type="text"],
+select {
+   /*  width: 100%; */
+   width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #007BFF;
+}
+
+button {
+    width: auto; /* Keep the width auto for smaller size */
+    padding: 10px 20px; /* Adjust padding for a slightly larger button */
+    margin: 15px auto; /* Center the button by setting left and right margins to auto */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Adjust font size for better readability */
+    display: block; /* Change to block to allow margin auto to work */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#suggestions {
+    display: none;
+    position: absolute; /* Keep the dropdown positioned relative to the container */
+    left: 10; /* Align it to the left edge of the container */
+    width: calc(100% - 32px); /* Set to 100% minus any padding from the container */
+    max-height: 150px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Border around the dropdown */
+    background-color: #fff; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    z-index: 100; /* Ensure it appears above other elements */
+}
+
+/* Custom scrollbar styles */
+#suggestions::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#suggestions::-webkit-scrollbar-track {
+    background: #f4f4f9; /* Background of the scrollbar track */
+    border-radius: 5px; /* Rounded corners for the track */
+}
+
+#suggestions::-webkit-scrollbar-thumb {
+    background: #007BFF; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+#suggestions::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Darker color on hover */
+}
+
+/* Optional: Styling for the suggestion items */
+.suggestion-item {
+    padding: 10px; /* Spacing inside each suggestion item */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s; /* Smooth background color change */
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0; /* Highlight color on hover */
+}
+
+#info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6f7ff;
+    border-left: 5px solid #007BFF;
+    border-radius: 5px;
+    display: none;
+}
